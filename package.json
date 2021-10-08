@@ -1,0 +1,24 @@
+{
+  "name": "store_html",
+  "version": "1.0.0",
+  "description": "Store Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cesar De Paz @cesardpaz@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.5",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "postcss": "^8.3.7",
+    "sass": "^1.42.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ],
+  "dependencies": {}
+}

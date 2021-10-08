@@ -1,0 +1,40 @@
+@use '././base/variables' as v;
+
+.header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+}
+
+.header__logo {
+    margin-bottom: 2rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
+
+.header__description {
+    display: none;
+    p {
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: .4rem;
+    }
+
+    @media screen and (min-width: 768px) {
+       display: block;
+    }
+}
+
+.header__link {
+    a {
+        font-size: 1.3rem;
+    }
+}

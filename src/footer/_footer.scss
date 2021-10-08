@@ -1,0 +1,24 @@
+@use '././base/variables' as v;
+
+.footer__description {
+
+    padding: 3rem 0;
+    border-top: 1px solid #cbcbcb;
+    margin-top: 3rem;
+
+    h1,h2,h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: v.$grayText;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 1.3rem;
+        color: v.$gray;
+        text-align: center;
+    }
+    a, b {
+        font-size: 1.3rem;
+    }
+}
