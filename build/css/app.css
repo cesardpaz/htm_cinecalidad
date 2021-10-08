@@ -385,6 +385,10 @@ img {
   align-items: center;
 }
 
+.align-start {
+  align-items: flex-start;
+}
+
 .mb-2 {
   margin-bottom: 2rem;
 }
@@ -452,17 +456,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tagsList {
-  width: calc(100% - 20rem);
-  padding-right: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .tagsList {
+    width: calc(100% - 20rem);
+    padding-right: 1.5rem;
+  }
 }
 .tagsList a {
   font-size: 1.2rem;
   background-color: #000;
   color: #fff;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 0.4rem;
   display: inline-block;
   transition: all 0.3s ease;
+  margin-bottom: 0.4rem;
 }
 .tagsList a:hover {
   background-color: #099c8c;
@@ -473,21 +483,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tagList__cnt {
-  width: calc(100% - 7rem);
+  width: 100%;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  order: 2;
+}
+@media screen and (min-width: 768px) {
+  .tagList__cnt {
+    display: block;
+    width: calc(100% - 7rem);
+    order: 0;
+  }
+}
+
+.ad-grid {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .ad-grid {
+    display: block;
+  }
 }
 
 .searchNav {
-  width: 20rem;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 .searchNav form input {
   border: 0.1rem solid #000;
   font-size: 1.3rem;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   width: 100%;
 }
 .searchNav form input:focus, .searchNav form input:hover {
   outline: none;
+}
+@media screen and (min-width: 768px) {
+  .searchNav {
+    width: 20rem;
+    margin-top: 0;
+  }
 }
 
 .postBlock {

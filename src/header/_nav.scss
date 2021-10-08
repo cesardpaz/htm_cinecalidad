@@ -1,16 +1,22 @@
 @use "././base/variables" as v;
 
 .tagsList {
-    width: calc(100% - 20rem);
-    padding-right: 1.5rem;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: calc(100% - 20rem);
+        padding-right: 1.5rem;
+    }
+
     a {
         font-size: 1.2rem;
         background-color: v.$black;
         color: v.$white;
-        padding: 0.6rem 1rem;
+        padding: 0.7rem 1rem;
         border-radius: 0.4rem;
         display: inline-block;
         transition: all 0.3s ease;
+        margin-bottom: 0.4rem;
 
         &:hover {
             background-color: v.$green;
@@ -23,23 +29,45 @@
 }
 
 .tagList__cnt {
-    width: calc(100% - 7rem);
+    width: 100%;
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+    order: 2;
+    @media screen and (min-width: 768px) {
+        display: block;
+        width: calc(100% - 7rem);
+        order: 0;
+    }
 }
 
-.searchNav {
-  width: 20rem;
-  form {
-    input {
-      border: 0.1rem solid v.$black;
-      font-size: 1.3rem;
-      padding: 0.8rem 1rem;
-      border-radius: 0.5rem;
-      width: 100%;
 
-      &:focus,
-      &:hover {
-        outline: none;
-      }
+.ad-grid {
+    display: grid;
+    @media screen and (min-width: 768px) {
+        display: block;
     }
-  }
+}
+
+
+.searchNav {
+    width: 100%;
+    margin-top: 0.5rem;
+    form {
+        input {
+            border: 0.1rem solid v.$black;
+            font-size: 1.3rem;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        width: 20rem;
+        margin-top: 0;
+    }
 }
